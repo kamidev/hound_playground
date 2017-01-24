@@ -27,6 +27,7 @@ defmodule HoundPlayground.ChatTest do
     send_message("Message from session 2")
     change_to_default_session()
 
+    take_screenshot()
     messages = find_element(:id, "messages")
     [msg1, msg2] = messages 
     |> find_all_within_element(:tag, "li")

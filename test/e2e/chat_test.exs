@@ -18,6 +18,7 @@ defmodule HoundPlayground.ChatTest do
     chat_input2 = find_element(:id, "chat-input")
     chat_input2 |> fill_field(message)
     send_keys(:enter)
+    :timer.sleep(1000)
   end
 
   test "receive chat from another session" do

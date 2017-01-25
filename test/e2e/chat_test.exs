@@ -18,7 +18,7 @@ defmodule HoundPlayground.ChatTest do
     chat_input2 = find_element(:id, "chat-input")
     chat_input2 |> fill_field(message)
     send_keys(:enter)
-    :timer.sleep(2000)
+    :timer.sleep(1000)
   end
 
   test "receive chat from another session" do
@@ -27,7 +27,6 @@ defmodule HoundPlayground.ChatTest do
     send_message("Message from session 2")
     change_to_default_session()
 
-    take_screenshot()
     messages = find_element(:id, "messages")
     [msg1, msg2] = messages 
     |> find_all_within_element(:tag, "li")

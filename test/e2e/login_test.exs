@@ -50,7 +50,6 @@ defmodule HoundPlayground.LoginTest do
 
   test "cannot access secure without logging in" do
     navigate_to(secure_index())
-    take_screenshot()
     assert current_url() == login_index() 
   end
 

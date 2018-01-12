@@ -2,7 +2,7 @@ defmodule HoundPlayground.LoginTest do
   use HoundPlayground.ConnCase
   use Hound.Helpers
   
-  hound_session
+  hound_session()
 
   defp login_index do
     login_url(HoundPlayground.Endpoint, :index)

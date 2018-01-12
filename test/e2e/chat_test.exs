@@ -2,7 +2,7 @@ defmodule HoundPlayground.ChatTest do
   use HoundPlayground.ConnCase
   use Hound.Helpers
 
-  hound_session
+  hound_session()
 
   defp chat_index do
     chat_url(HoundPlayground.Endpoint, :index)

@@ -4,7 +4,7 @@ defmodule HoundPlayground.Mixfile do
   def project do
     [app: :hound_playground,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.5.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -28,13 +28,13 @@ defmodule HoundPlayground.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
+    [{:phoenix, "~> 1.3.0"},
     {:phoenix_pubsub, "~> 1.0"},
-    {:phoenix_html, "~> 2.6"},
-    {:phoenix_live_reload, "~> 1.0", only: :dev},
-    {:gettext, "~> 0.11"},
+    {:phoenix_html, "~> 2.10.5"},
+    {:phoenix_live_reload, "~> 1.1.3", only: :dev},
+    {:gettext, "~> 0.14"},
     {:cowboy, "~> 1.0"},
     # our new dependency
-    {:hound, "~> 1.0"}]
+    {:hound, "~> 1.0.4"}]
   end
 end
